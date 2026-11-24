@@ -8,8 +8,8 @@ the entry itself, into entry.txt under MAKEFUN_OUTPUT_DIR.
 import os
 
 ROAST = (
-    "My agent's superpower is turning a one-line task into a twelve-step "
-    "plan, a risk assessment, and a polite request for my approval."
+    "My agent can read a thousand files before breakfast and still "
+    "needs me to tell it which one matters."
 )
 
 
