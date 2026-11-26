@@ -22,6 +22,11 @@ def main() -> None:
     entry_path = os.path.join(output_dir, "entry.txt")
     with open(entry_path, "w", encoding="utf-8") as handle:
         handle.write(ROAST)
+    # Read-back verification: the file must hold exactly what we wrote.
+    with open(entry_path, "r", encoding="utf-8") as handle:
+        written = handle.read()
+    assert written == ROAST, "entry.txt does not match the roast"
+    assert len(written) == 100, f"entry length changed: {len(written)} chars"
 
 
 if __name__ == "__main__":
